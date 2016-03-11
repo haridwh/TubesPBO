@@ -1,2 +1,2 @@
 # TubesPBO
-Repo Tubes PBO Team-01
+Repo Tubes PBO Team-01, Sistem Informasi Proyek Manajemen
