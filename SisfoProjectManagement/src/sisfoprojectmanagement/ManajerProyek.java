@@ -18,11 +18,15 @@ public class ManajerProyek extends Orang {
     
     public void createProyek( Date deadline){
         if (nProyek<3){
-            proyek[nProyek] = new Proyek(deadline);
+            setProyek(deadline);
         }else{
             System.out.println("Tidak Dapat Menambah Proyek Lagi");
         }
         nProyek++;
+    }
+    
+    public void setProyek(Date deadline){
+        proyek[nProyek] = new Proyek(deadline);
     }
     
     public Proyek getProyek(int index){
