@@ -12,7 +12,7 @@ package sisfoprojectmanagement;
 
 import java.util.Date;
 
-public class ManajerProyek {
+public class ManajerProyek extends Orang {
     private Proyek[] proyek = new Proyek[3];
     private int nProyek;
     

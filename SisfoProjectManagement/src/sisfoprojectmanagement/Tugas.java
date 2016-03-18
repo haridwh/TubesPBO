@@ -10,17 +10,21 @@ import java.util.Date;
  * @author Maidarman
  */
 public class Tugas {
-        private Programer pelaksana;
+        private Programmer pelaksana;
 	private String nama;
 	private String detail;
 	private boolean status;
 	private Date deadline;
 
-	public void setPelaksana (Programer p){
+        public Tugas(String nama){
+            this.nama=nama;
+        }
+        
+	public void setPelaksana (Programmer p){
 		pelaksana = p;
 	}
 
-	public Programer getPelaksana (){
+	public Programmer getPelaksana (){
 		return pelaksana;
 	}
 

@@ -37,11 +37,40 @@ public class Proyek {
     }
     
     public void removeProgrammer(int index){
-        
+        if (index == 0){
+            if (nProgrammmer == 1){
+                programmer[index] = null;
+            }else{
+                for (int i = index; i < nProgrammmer; i++){
+                    if(i == (nProgrammmer-1)){
+                        programmer[i]=null;
+                    }else{
+                        programmer[i]=programmer[i+1];
+                    }
+                }
+            }
+        }else if (index == (nProgrammmer-1)){
+            programmer[index] = null;
+        }else{
+            for (int i = index; i < nProgrammmer; i++){
+                if(i == (nProgrammmer-1)){
+                    programmer[i]=null;
+                }else{
+                    programmer[i]=programmer[i+1];
+		}
+            }
+        }
+        nProgrammmer--;
     }
     
     public void createTugas(String tugas){
-        
+        if (this.tugas.length>nTugas){
+            Tugas t = new Tugas(tugas);
+            this.tugas[nTugas] = t;
+        }else{
+            System.out.println("Tidak Dapat Menambah Programmer Lagi!");
+        }
+        nTugas++;
     }
     
     public Tugas getTugas(int index){
@@ -49,7 +78,30 @@ public class Proyek {
     }
     
     public void deleteTugas(int index){
-    
+        if (index == 0){
+            if (nTugas == 1){
+                tugas[index] = null;
+            }else{
+                for (int i = index; i < nTugas; i++){
+                    if(i == (nTugas-1)){
+                        tugas[i]=null;
+                    }else{
+                        tugas[i]=tugas[i+1];
+                    }
+                }
+            }
+        }else if (index == (nTugas-1)){
+            tugas[index] = null;
+        }else{
+            for (int i = index; i < nTugas; i++){
+                if(i == (nTugas-1)){
+                    tugas[i]=null;
+                }else{
+                    tugas[i]=tugas[i+1];
+		}
+            }
+        }
+        nTugas--;
     }
     
     public void setNama(String nama){
