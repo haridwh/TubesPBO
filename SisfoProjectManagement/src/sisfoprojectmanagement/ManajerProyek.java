@@ -10,7 +10,6 @@ package sisfoprojectmanagement;
  * @author skday
  */
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ManajerProyek {
