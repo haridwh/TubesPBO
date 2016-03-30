@@ -16,6 +16,8 @@ public class SisfoProjectManagement {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Aplikasi App = new Aplikasie ();
+        App.mainMenu();
         
     }
     
