@@ -14,9 +14,13 @@ import java.util.Date;
 
 public class ManajerProyek extends Orang {
     private Proyek[] proyek = new Proyek[3];
-    private int nProyek;
+    private int nProyek=0;
     
-    public void createProyek( Date deadline){
+    public ManajerProyek(String nama, String gender, int usia){
+        super(nama,gender,usia);
+    }
+    
+    public void createProyek(Date deadline){
         if (nProyek<3){
             setProyek(deadline);
         }else{

@@ -16,8 +16,8 @@ public class Proyek {
     private Tugas[] tugas;
     String nama;
     Date deadline;
-    int nProgrammmer;
-    int nTugas;
+    int nProgrammmer=0;
+    int nTugas=0;
     
     public Proyek(Date deadline){
         this.deadline = deadline;
@@ -118,5 +118,13 @@ public class Proyek {
     
     public Date getDeadLine(){
         return this.deadline;
-    }  
+    }
+    
+    public int getNProgrammmer() {
+        return nProgrammmer;
+    }
+
+    public int getNTugas() {
+        return nTugas;
+    }
 }
