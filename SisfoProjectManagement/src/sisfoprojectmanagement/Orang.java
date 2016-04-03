@@ -14,7 +14,7 @@ public class Orang {
 private String kelamin;
 private int usia;
 
-public void setnama()
+public void setnama(String nama)
 {
 	this.nama=nama;
 }
@@ -24,7 +24,7 @@ public String getnama()
 	return nama;
 }
 
-public void setkelamin()
+public void setkelamin(String kelamin)
 {
 	this.kelamin=kelamin;
 }
@@ -34,7 +34,7 @@ public String getkelamin()
 	return kelamin;
 }
 
-public void setusia()
+public void setusia(int usia)
 {
 	this.usia=usia;
 }
