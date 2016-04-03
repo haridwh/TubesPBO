@@ -10,6 +10,7 @@ package sisfoprojectmanagement;
  * @author gridd
  */
 public class Programmer extends Orang{
+   
     public Programmer(String nama, String kelamin, int usia){
     super(nama,kelamin,usia);
     }
