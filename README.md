@@ -1,5 +1,6 @@
 # TubesPBO
 Repo Tubes PBO Team-01, Sistem Informasi Proyek Manajemen
+Matakuliah PBO adalah matakuliah yang mengajarkan cara pemrograman berorientasi objek.
 
 Ini merupakan aplikasi Sistem Informasi Proyek Manajemen, dimana project manager dapat membuat proyek dan mengadd beberapa programmer pada proyek tersebut. Selain itu project manager juga dapat membuat tugas dan mensetnya pada programmer yang terdaftar pada proyek tersebut.
 
