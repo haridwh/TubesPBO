@@ -31,9 +31,11 @@
                   <Component id="jPanel3" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="BtnCreateTugas" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnHapusProyek" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnHapusProgrammer" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnTambahprogrammer" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="43" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jPanel4" max="32767" attributes="0"/>
               </Group>
@@ -47,7 +49,8 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="BtnCreateTugas" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnHapusProyek" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnHapusProgrammer" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnTambahprogrammer" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="28" max="32767" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
@@ -103,6 +106,8 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btnHapusTugas1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="BtnDetailTugas1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -124,7 +129,10 @@
                       <Component id="LS1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="9" max="32767" attributes="0"/>
-                  <Component id="BtnDetailTugas1" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="BtnDetailTugas1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnHapusTugas1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -172,6 +180,11 @@
             <Property name="text" type="java.lang.String" value="Detail Tugas"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="btnHapusTugas1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Hapus Tugas"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel2">
@@ -208,6 +221,8 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btnHapusTugas2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="BtnDetailTugas2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -229,7 +244,10 @@
                       <Component id="LS2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="9" max="32767" attributes="0"/>
-                  <Component id="BtnDetailTugas2" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="BtnDetailTugas2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnHapusTugas2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -277,6 +295,14 @@
             <Property name="text" type="java.lang.String" value="Detail Tugas"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="btnHapusTugas2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Hapus Tugas"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHapusTugas2ActionPerformed"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel3">
@@ -314,6 +340,8 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btnHapusTugas3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="BtnDetailTugas3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -335,7 +363,10 @@
                       <Component id="LS3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="11" max="32767" attributes="0"/>
-                  <Component id="BtnDetailTugas3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="BtnDetailTugas3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnHapusTugas3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -383,6 +414,11 @@
             <Property name="text" type="java.lang.String" value="Detail Tugas"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="btnHapusTugas3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Hapus Tugas"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel4">
@@ -420,6 +456,8 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btnHapusTugas4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="BtnDetailTugas4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -441,7 +479,10 @@
                       <Component id="LS4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="9" max="32767" attributes="0"/>
-                  <Component id="BtnDetailTugas4" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="BtnDetailTugas4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnHapusTugas4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -489,11 +530,21 @@
             <Property name="text" type="java.lang.String" value="Detail Tugas"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="btnHapusTugas4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Hapus Tugas"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnHapusProyek">
+    <Component class="javax.swing.JButton" name="btnHapusProgrammer">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Hapus Proyek"/>
+        <Property name="text" type="java.lang.String" value="Hapus Programmer"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnTambahprogrammer">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tambah Programmer"/>
       </Properties>
     </Component>
   </SubComponents>

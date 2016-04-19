@@ -54,12 +54,7 @@ public class DetailTugas extends javax.swing.JFrame {
     public void setLNt(JLabel LNt) {
         this.LNt = LNt;
     }
-    public void addListener(ActionListener e){
-        btnHapusProgrammer.addActionListener(e);
-       btnHapustugas.addActionListener(e);
-        
- 
-    }
+    
     
 
     /**
@@ -84,8 +79,6 @@ public class DetailTugas extends javax.swing.JFrame {
         LDT = new javax.swing.JLabel();
         LNP = new javax.swing.JLabel();
         LDeskT = new javax.swing.JLabel();
-        btnHapusProgrammer = new javax.swing.JButton();
-        btnHapustugas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -115,10 +108,6 @@ public class DetailTugas extends javax.swing.JFrame {
 
         LDeskT.setText("jLabel12");
 
-        btnHapusProgrammer.setText("Hapus Programmer");
-
-        btnHapustugas.setText("Hapus Tugas");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -126,10 +115,6 @@ public class DetailTugas extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnHapusProgrammer)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnHapustugas))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -156,7 +141,7 @@ public class DetailTugas extends javax.swing.JFrame {
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
                         .addComponent(LNP)))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,11 +166,7 @@ public class DetailTugas extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(LDeskT)
                     .addComponent(jLabel4))
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnHapusProgrammer)
-                    .addComponent(btnHapustugas))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         LNt.getAccessibleContext().setAccessibleName("LNamaTugas");
@@ -222,8 +203,6 @@ public class DetailTugas extends javax.swing.JFrame {
     private javax.swing.JLabel LDeskT;
     private javax.swing.JLabel LNP;
     private javax.swing.JLabel LNt;
-    private javax.swing.JButton btnHapusProgrammer;
-    private javax.swing.JButton btnHapustugas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
