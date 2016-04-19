@@ -15,6 +15,9 @@ private String kelamin;
 private int usia;
 
 public Orang(String nama,String kelamin,int usia){
+    this.nama=nama;
+    this.kelamin=kelamin;
+    this.usia=usia;
 }
         
 public void setnama(String nama)

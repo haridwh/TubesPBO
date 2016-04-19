@@ -16,7 +16,7 @@ import java.util.Scanner;
  * @author skday
  */
 public class Aplikasi {
-    List listOrang  = new ArrayList();
+    List<Object> listOrang  = new ArrayList<Object>();
     Scanner scr = new Scanner(System.in);
     
     public void addManajerProyek(ManajerProyek mP){
@@ -31,7 +31,7 @@ public class Aplikasi {
         int i = 0;
         boolean get = false;
         while ((i < listOrang.size()) && (!get)){
-            if ((listOrang.get(i) instanceof Programmer) 
+            if ((listOrang.get(i) instanceof ManajerProyek) 
                     && (((ManajerProyek)listOrang.get(i)).getnama())
                             .equalsIgnoreCase(nama)){
                 get=true;
@@ -40,7 +40,7 @@ public class Aplikasi {
             }
         }
         if (get){
-            return (ManajerProyek)listOrang.get(i);
+            return ((ManajerProyek)listOrang.get(i));
         }else{
             return null;
         }
@@ -102,6 +102,7 @@ public class Aplikasi {
     public void mCreateProyek (ManajerProyek mp){
         try {
             System.out.println("PROYEK BARU");
+            scr.nextLine();
             System.out.print("Masukkan Deadline Proyek(dd/MM/yyyy) : ");
             String date = scr.nextLine();
             mp.createProyek(new SimpleDateFormat("dd/MM/yyyy").parse(date));
@@ -126,6 +127,7 @@ public class Aplikasi {
                 System.out.println("=============================================");
                 System.out.println("1. Hapus Proyek");
                 System.out.println("2. Detail Proyek");
+                System.out.println("0. Kembali");
                 System.out.print("Pilih : ");
                 pil = scr.next().charAt(0);
                 switch(pil){
@@ -141,6 +143,8 @@ public class Aplikasi {
             }else{
                 System.out.println("Belum Ada Proyek");
                 scr.nextLine();
+                scr.nextLine();
+                pil = '0';
             }
         }
     }
@@ -150,11 +154,11 @@ public class Aplikasi {
         while(pil != '0'){
             if(mp.getProyek(n).getNProgrammmer() !=0){
                 for(int i = 0; i<mp.getProyek(n).getNProgrammmer();i++){
-                    System.out.println("Programmer "+(i+1));
-                    System.out.println(mp.getProyek(n).getProgrammer(i).getnama());
-                    System.out.println(mp.getProyek(n).getProgrammer(i).getusia());
-                    System.out.println(mp.getProyek(n).getProgrammer(i).getkelamin());
                     System.out.println();
+                    System.out.println("Programmer "+(i+1));
+                    System.out.println("Nama : "+mp.getProyek(n).getProgrammer(i).getnama());
+                    System.out.println("Umur : "+mp.getProyek(n).getProgrammer(i).getusia());
+                    System.out.println("Gender : "+mp.getProyek(n).getProgrammer(i).getkelamin());
                 }
                 System.out.println("=============================================");
             }else{
@@ -167,7 +171,7 @@ public class Aplikasi {
                     System.out.println("Tugas "+(i+1));
                     System.out.println("Nama Tugas : "+mp.getProyek(n).getTugas(i).getNama());
                     System.out.println("Detail : "+mp.getProyek(n).getTugas(i).getDetail());
-                    System.out.println("Pelaksana : "+mp.getProyek(n).getTugas(i).getPelaksana());
+                    System.out.println("Pelaksana : "+mp.getProyek(n).getTugas(i).getPelaksana().getnama());
                     System.out.println("Deadline : "+mp.getProyek(n).getTugas(i).getDeadline());
                     if (mp.getProyek(n).getTugas(i).getStatus()){
                         System.out.println("Status : Selesai");
@@ -206,6 +210,7 @@ public class Aplikasi {
     }
     
     public void tambahProgrammer(ManajerProyek mp, int n){
+        scr.nextLine();
         System.out.print("Nama Programmer : ");
         String nama = scr.nextLine();
         int i = 0;
@@ -235,11 +240,12 @@ public class Aplikasi {
     
     public void buatTugas(ManajerProyek mp, int n){
         try {
+            scr.nextLine();
             System.out.print("Nama tugas : ");
             String namaT = scr.nextLine();
             System.out.print("Detail tugas : ");
             String detailT = scr.nextLine();
-            System.out.println("Deadline : ");
+            System.out.print("Deadline : ");
             String date = scr.nextLine();
             mp.getProyek(n).createTugas(namaT);
             mp.getProyek(n).getTugas((mp.getProyek(n).getNTugas()-1)).setDetail(detailT);
@@ -278,6 +284,7 @@ public class Aplikasi {
     }
     
     public void tugasSelesai(){
+        scr.nextLine();
         System.out.println("Masukkan nama tugas : ");
         String nama = scr.nextLine();
         int i=0;
@@ -317,6 +324,7 @@ public class Aplikasi {
     
     public void login(String nm){
         if (getManajerProyek(nm) != null){
+            System.out.println("error");
             menuManajerProyek(getManajerProyek(nm));
         }else if (getProgrammer(nm)!= null){
             menuProgrammer(getProgrammer(nm));
@@ -395,6 +403,7 @@ public class Aplikasi {
                 System.out.println("1. Tugas Selesai");
                 System.out.println("0. Logout");
                 System.out.print("Pilih : ");
+                pil = scr.next().charAt(0);
                 switch (pil){
                     case '1':
                         tugasSelesai();
@@ -403,6 +412,7 @@ public class Aplikasi {
             }            
         }else{
             System.out.println("Tidak ada tugas");
+            System.out.println("Tekan Enter Untuk Logout!");
             scr.nextLine();
         }
     }
@@ -421,25 +431,28 @@ public class Aplikasi {
                 case '1':
                     System.out.println("LOGIN");
                     System.out.print("Masukkan Nama Anda : ");
-                    scr.next();
+                    scr.nextLine();
                     String nm = scr.nextLine();
                     login(nm);
                     break;
                 case '2':
                     System.out.println("TAMBAH ORANG");
+                    scr.nextLine();
                     System.out.print("Nama : ");
                     String nama = scr.nextLine();
-                    System.out.println("Usia : ");
+                    System.out.print("Usia : ");
                     int usia = scr.nextInt();
-                    System.out.println("Jenis Kelamin : ");
+                    System.out.print("Jenis Kelamin : ");
+                    scr.next();
                     String kelamin = scr.nextLine();
                     char a='z';
-                    while ((a!='1') && (a!='2'))
+                    while (a!='1' && a!='2'){
                         System.out.println("1. Project Manager");
                         System.out.println("2. Programmer");
-                        System.out.println("Pilih : ");
+                        System.out.print("Pilih : ");
                         a = scr.next().charAt(0);
                         tambahOrang(a,nama,usia,kelamin);
+                    }
                     break;
             }
         }

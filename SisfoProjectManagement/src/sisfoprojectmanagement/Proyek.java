@@ -21,6 +21,8 @@ public class Proyek {
     
     public Proyek(Date deadline){
         this.deadline = deadline;
+        programmer = new Programmer[10];
+        tugas = new Tugas[10];
     }
     
     public void addPogrammer(Programmer p){
