@@ -29,7 +29,13 @@ public class DetailProyek extends javax.swing.JFrame {
         BtnDetailTugas2.addActionListener(e);
         BtnDetailTugas3.addActionListener(e);
         BtnDetailTugas4.addActionListener(e);
-        btnHapusProyek.addActionListener(e);
+        btnHapusProgrammer.addActionListener(e);
+        btnHapusTugas1.addActionListener(e);
+        btnHapusTugas2.addActionListener(e);
+        btnHapusTugas3.addActionListener(e);
+        btnHapusTugas4.addActionListener(e);
+        btnTambahprogrammer.addActionListener(e);
+        
  
     }
 
@@ -116,6 +122,7 @@ public class DetailProyek extends javax.swing.JFrame {
         LNT1 = new javax.swing.JLabel();
         LS1 = new javax.swing.JLabel();
         BtnDetailTugas1 = new javax.swing.JButton();
+        btnHapusTugas1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -124,6 +131,7 @@ public class DetailProyek extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         LS2 = new javax.swing.JLabel();
         BtnDetailTugas2 = new javax.swing.JButton();
+        btnHapusTugas2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -132,6 +140,7 @@ public class DetailProyek extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         LS3 = new javax.swing.JLabel();
         BtnDetailTugas3 = new javax.swing.JButton();
+        btnHapusTugas3 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -140,7 +149,9 @@ public class DetailProyek extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         LS4 = new javax.swing.JLabel();
         BtnDetailTugas4 = new javax.swing.JButton();
-        btnHapusProyek = new javax.swing.JButton();
+        btnHapusTugas4 = new javax.swing.JButton();
+        btnHapusProgrammer = new javax.swing.JButton();
+        btnTambahprogrammer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -161,6 +172,8 @@ public class DetailProyek extends javax.swing.JFrame {
         LS1.setText("jLabel12");
 
         BtnDetailTugas1.setText("Detail Tugas");
+
+        btnHapusTugas1.setText("Hapus Tugas");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -184,6 +197,8 @@ public class DetailProyek extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnHapusTugas1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnDetailTugas1)
                 .addContainerGap())
         );
@@ -201,7 +216,9 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(jLabel10)
                     .addComponent(LS1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(BtnDetailTugas1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnDetailTugas1)
+                    .addComponent(btnHapusTugas1))
                 .addContainerGap())
         );
 
@@ -223,6 +240,13 @@ public class DetailProyek extends javax.swing.JFrame {
         LS2.setText("jLabel16");
 
         BtnDetailTugas2.setText("Detail Tugas");
+
+        btnHapusTugas2.setText("Hapus Tugas");
+        btnHapusTugas2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusTugas2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -246,6 +270,8 @@ public class DetailProyek extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnHapusTugas2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnDetailTugas2)
                 .addContainerGap())
         );
@@ -263,7 +289,9 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(jLabel15)
                     .addComponent(LS2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(BtnDetailTugas2)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnDetailTugas2)
+                    .addComponent(btnHapusTugas2))
                 .addContainerGap())
         );
 
@@ -285,6 +313,8 @@ public class DetailProyek extends javax.swing.JFrame {
         LS3.setText("jLabel20");
 
         BtnDetailTugas3.setText("Detail Tugas");
+
+        btnHapusTugas3.setText("Hapus Tugas");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -308,6 +338,8 @@ public class DetailProyek extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnHapusTugas3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnDetailTugas3)
                 .addContainerGap())
         );
@@ -325,7 +357,9 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(jLabel19)
                     .addComponent(LS3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                .addComponent(BtnDetailTugas3)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnDetailTugas3)
+                    .addComponent(btnHapusTugas3))
                 .addContainerGap())
         );
 
@@ -347,6 +381,8 @@ public class DetailProyek extends javax.swing.JFrame {
         LS4.setText("jLabel24");
 
         BtnDetailTugas4.setText("Detail Tugas");
+
+        btnHapusTugas4.setText("Hapus Tugas");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -370,6 +406,8 @@ public class DetailProyek extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnHapusTugas4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnDetailTugas4)
                 .addContainerGap())
         );
@@ -387,14 +425,18 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(jLabel23)
                     .addComponent(LS4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(BtnDetailTugas4)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnDetailTugas4)
+                    .addComponent(btnHapusTugas4))
                 .addContainerGap())
         );
 
         LNT4.getAccessibleContext().setAccessibleName("LNamaTugas4");
         LS4.getAccessibleContext().setAccessibleName("LStatus4");
 
-        btnHapusProyek.setText("Hapus Proyek");
+        btnHapusProgrammer.setText("Hapus Programmer");
+
+        btnTambahprogrammer.setText("Tambah Programmer");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -408,9 +450,11 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(BtnCreateTugas)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnHapusProyek)
-                        .addGap(0, 200, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnHapusProgrammer)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnTambahprogrammer)
+                        .addGap(0, 43, Short.MAX_VALUE))
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -420,7 +464,8 @@ public class DetailProyek extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnCreateTugas)
-                    .addComponent(btnHapusProyek))
+                    .addComponent(btnHapusProgrammer)
+                    .addComponent(btnTambahprogrammer))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -434,6 +479,10 @@ public class DetailProyek extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnHapusTugas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusTugas2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHapusTugas2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -454,7 +503,12 @@ public class DetailProyek extends javax.swing.JFrame {
     private javax.swing.JLabel LS2;
     private javax.swing.JLabel LS3;
     private javax.swing.JLabel LS4;
-    private javax.swing.JButton btnHapusProyek;
+    private javax.swing.JButton btnHapusProgrammer;
+    private javax.swing.JButton btnHapusTugas1;
+    private javax.swing.JButton btnHapusTugas2;
+    private javax.swing.JButton btnHapusTugas3;
+    private javax.swing.JButton btnHapusTugas4;
+    private javax.swing.JButton btnTambahprogrammer;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;

@@ -6,6 +6,7 @@
 package sisfoprojectmanagement.view;
 
 import java.awt.event.ActionListener;
+import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
 /**
@@ -26,6 +27,14 @@ public class TambahOrang extends javax.swing.JFrame {
     public void addListener(ActionListener e){
         btnCreate.addActionListener(e);
       
+    }
+
+    public JComboBox getStatus() {
+        return Status;
+    }
+
+    public void setStatus(JComboBox Status) {
+        this.Status = Status;
     }
 
     public JTextField getJK() {
@@ -68,6 +77,8 @@ public class TambahOrang extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btnCreate = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        Status = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,29 +96,35 @@ public class TambahOrang extends javax.swing.JFrame {
 
         btnCreate.setText("Create");
 
+        jLabel4.setText("Status");
+
+        Status.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(130, 130, 130)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(Usia)
-                                .addComponent(Nama, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addContainerGap()
+                                .addComponent(Nama, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
+                                .addComponent(jLabel1)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel3)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel3)
+                                        .addComponent(jLabel4))
                                     .addGap(18, 18, 18)
-                                    .addComponent(JK, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jLabel1))))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(JK)
+                                        .addComponent(Status, 0, 139, Short.MAX_VALUE))))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(161, 161, 161)
+                        .addGap(163, 163, 163)
                         .addComponent(btnCreate)))
                 .addContainerGap(132, Short.MAX_VALUE))
         );
@@ -126,9 +143,13 @@ public class TambahOrang extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(Status, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnCreate)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         pack();
@@ -146,10 +167,12 @@ public class TambahOrang extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField JK;
     private javax.swing.JTextField Nama;
+    private javax.swing.JComboBox Status;
     private javax.swing.JTextField Usia;
     private javax.swing.JButton btnCreate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

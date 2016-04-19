@@ -66,6 +66,9 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         BtnDetailProyek1.addActionListener(e);
         BtnDetailProyek2.addActionListener(e);
         BtnDetailProyek3.addActionListener(e);
+        btnHapusproyek1.addActionListener(e);
+        btnHapusproyek2.addActionListener(e);
+        btnHapusproyek3.addActionListener(e);
        
     }
     /**
@@ -107,6 +110,7 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         NamaProyek1 = new javax.swing.JLabel();
         DL1 = new javax.swing.JLabel();
+        btnHapusproyek1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         BtnDetailProyek2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -115,6 +119,7 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         NamaProyek2 = new javax.swing.JLabel();
         DL2 = new javax.swing.JLabel();
+        btnHapusproyek2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         BtnDetailProyek3 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -123,6 +128,7 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         NamaProyek3 = new javax.swing.JLabel();
         DL3 = new javax.swing.JLabel();
+        btnHapusproyek3 = new javax.swing.JButton();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -209,12 +215,16 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
 
         DL1.setText("jLabel14");
 
+        btnHapusproyek1.setText("Hapus Proyek");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnHapusproyek1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnDetailProyek1)
                 .addGap(30, 30, 30))
             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -248,7 +258,9 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(DL1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BtnDetailProyek1)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnDetailProyek1)
+                    .addComponent(btnHapusproyek1))
                 .addContainerGap())
         );
 
@@ -271,12 +283,21 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
 
         DL2.setText("jLabel16");
 
+        btnHapusproyek2.setText("Hapus Proyek");
+        btnHapusproyek2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusproyek2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnHapusproyek2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnDetailProyek2)
                 .addGap(29, 29, 29))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -310,7 +331,9 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(DL2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BtnDetailProyek2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnDetailProyek2)
+                    .addComponent(btnHapusproyek2))
                 .addContainerGap())
         );
 
@@ -333,6 +356,8 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
 
         DL3.setText("jLabel18");
 
+        btnHapusproyek3.setText("Hapus Proyek");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -352,14 +377,16 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
                         .addComponent(jLabel12)
                         .addGap(35, 35, 35)
                         .addComponent(NamaProyek3)))
-                .addGap(295, 295, 295)
+                .addGap(216, 216, 216)
+                .addComponent(btnHapusproyek3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnDetailProyek3)
                 .addGap(29, 29, 29))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(25, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jLabel12)
@@ -370,7 +397,9 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addComponent(jLabel6)
                         .addComponent(DL3))
-                    .addComponent(BtnDetailProyek3))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(BtnDetailProyek3)
+                        .addComponent(btnHapusproyek3)))
                 .addGap(24, 24, 24))
         );
 
@@ -404,7 +433,7 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         jPanel3.getAccessibleContext().setAccessibleName("panel1");
@@ -413,6 +442,10 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnHapusproyek2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusproyek2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHapusproyek2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -430,6 +463,9 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
     private javax.swing.JLabel NamaProyek1;
     private javax.swing.JLabel NamaProyek2;
     private javax.swing.JLabel NamaProyek3;
+    private javax.swing.JButton btnHapusproyek1;
+    private javax.swing.JButton btnHapusproyek2;
+    private javax.swing.JButton btnHapusproyek3;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
