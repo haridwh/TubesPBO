@@ -25,6 +25,10 @@ public class DetailProyek extends javax.swing.JFrame {
     
       public void addListener(ActionListener e){
         BtnCreateTugas.addActionListener(e);
+        BtnDetailTugas1.addActionListener(e);
+        BtnDetailTugas2.addActionListener(e);
+        BtnDetailTugas3.addActionListener(e);
+        BtnDetailTugas4.addActionListener(e);
  
     }
 
@@ -110,6 +114,7 @@ public class DetailProyek extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         LNT1 = new javax.swing.JLabel();
         LS1 = new javax.swing.JLabel();
+        BtnDetailTugas1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -117,6 +122,7 @@ public class DetailProyek extends javax.swing.JFrame {
         LNT2 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         LS2 = new javax.swing.JLabel();
+        BtnDetailTugas2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -124,6 +130,7 @@ public class DetailProyek extends javax.swing.JFrame {
         LNT3 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         LS3 = new javax.swing.JLabel();
+        BtnDetailTugas3 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -131,6 +138,7 @@ public class DetailProyek extends javax.swing.JFrame {
         LNT4 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         LS4 = new javax.swing.JLabel();
+        BtnDetailTugas4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -149,6 +157,8 @@ public class DetailProyek extends javax.swing.JFrame {
         LNT1.setText("jLabel11");
 
         LS1.setText("jLabel12");
+
+        BtnDetailTugas1.setText("Detail Tugas");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -170,6 +180,10 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(LS1)
                     .addComponent(LNT1))
                 .addContainerGap(269, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnDetailTugas1)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,7 +198,9 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel10)
                     .addComponent(LS1))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addComponent(BtnDetailTugas1)
+                .addContainerGap())
         );
 
         LNT1.getAccessibleContext().setAccessibleName("LNamaTugas1");
@@ -203,6 +219,8 @@ public class DetailProyek extends javax.swing.JFrame {
         jLabel15.setText(":");
 
         LS2.setText("jLabel16");
+
+        BtnDetailTugas2.setText("Detail Tugas");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -224,6 +242,10 @@ public class DetailProyek extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(LS2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnDetailTugas2)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,7 +260,9 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(jLabel15)
                     .addComponent(LS2))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addComponent(BtnDetailTugas2)
+                .addContainerGap())
         );
 
         LNT2.getAccessibleContext().setAccessibleName("LNamaTugas2");
@@ -257,6 +281,8 @@ public class DetailProyek extends javax.swing.JFrame {
         jLabel19.setText(":");
 
         LS3.setText("jLabel20");
+
+        BtnDetailTugas3.setText("Detail Tugas");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -278,6 +304,10 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(LS3)
                     .addComponent(LNT3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnDetailTugas3)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -292,7 +322,9 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(jLabel19)
                     .addComponent(LS3))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(BtnDetailTugas3)
+                .addContainerGap())
         );
 
         LNT3.getAccessibleContext().setAccessibleName("LNamaTugas3");
@@ -311,6 +343,8 @@ public class DetailProyek extends javax.swing.JFrame {
         jLabel23.setText(":");
 
         LS4.setText("jLabel24");
+
+        BtnDetailTugas4.setText("Detail Tugas");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -332,6 +366,10 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(LS4)
                     .addComponent(LNT4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnDetailTugas4)
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -346,7 +384,9 @@ public class DetailProyek extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(jLabel23)
                     .addComponent(LS4))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addComponent(BtnDetailTugas4)
+                .addContainerGap())
         );
 
         LNT4.getAccessibleContext().setAccessibleName("LNamaTugas4");
@@ -373,7 +413,7 @@ public class DetailProyek extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(BtnCreateTugas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -394,6 +434,10 @@ public class DetailProyek extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCreateTugas;
+    private javax.swing.JButton BtnDetailTugas1;
+    private javax.swing.JButton BtnDetailTugas2;
+    private javax.swing.JButton BtnDetailTugas3;
+    private javax.swing.JButton BtnDetailTugas4;
     private javax.swing.JLabel LNT1;
     private javax.swing.JLabel LNT2;
     private javax.swing.JLabel LNT3;
