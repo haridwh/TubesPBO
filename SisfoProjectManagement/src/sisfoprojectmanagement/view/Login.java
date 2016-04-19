@@ -14,13 +14,6 @@ import javax.swing.JTextField;
  */
 public class Login extends javax.swing.JFrame {
 
-    public JTextField getTPassword() {
-        return TPassword;
-    }
-
-    public void setTPassword(JTextField TPassword) {
-        this.TPassword = TPassword;
-    }
 
     public JTextField getTUsername() {
         return TUsername;
@@ -31,6 +24,7 @@ public class Login extends javax.swing.JFrame {
     }
 public void addListener(ActionListener e){
         btnLogin.addActionListener(e);
+        BtnTambahOrang.addActionListener(e);
     }
     /**
      * Creates new form Login
@@ -51,10 +45,10 @@ public void addListener(ActionListener e){
     private void initComponents() {
 
         TUsername = new javax.swing.JTextField();
-        TPassword = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        BtnTambahOrang = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,27 +58,32 @@ public void addListener(ActionListener e){
 
         jLabel1.setText("Username");
 
-        jLabel2.setText("Password");
+        jLabel3.setText("Tambah Orang");
+
+        BtnTambahOrang.setText("Tambah Orang");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addComponent(btnLogin))
+                        .addGap(38, 38, 38)
+                        .addComponent(TUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                        .addGap(112, 112, 112))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BtnTambahOrang)
+                        .addGap(43, 43, 43))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(TUsername)
-                            .addComponent(TPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE))))
-                .addContainerGap(112, Short.MAX_VALUE))
+                        .addGap(80, 80, 80)
+                        .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,16 +93,15 @@ public void addListener(ActionListener e){
                     .addComponent(TUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
                 .addComponent(btnLogin)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addGap(57, 57, 57)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(BtnTambahOrang))
+                .addContainerGap())
         );
 
         TUsername.getAccessibleContext().setAccessibleName("Username");
-        TPassword.getAccessibleContext().setAccessibleName("Password");
         jLabel1.getAccessibleContext().setAccessibleName("UserName");
         jLabel1.getAccessibleContext().setAccessibleDescription("");
 
@@ -115,10 +113,10 @@ public void addListener(ActionListener e){
      */
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField TPassword;
+    private javax.swing.JButton BtnTambahOrang;
     private javax.swing.JTextField TUsername;
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
