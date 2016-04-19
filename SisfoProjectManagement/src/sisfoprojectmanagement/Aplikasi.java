@@ -443,7 +443,7 @@ public class Aplikasi {
                     System.out.print("Usia : ");
                     int usia = scr.nextInt();
                     System.out.print("Jenis Kelamin : ");
-                    scr.next();
+                    scr.nextLine();
                     String kelamin = scr.nextLine();
                     char a='z';
                     while (a!='1' && a!='2'){
