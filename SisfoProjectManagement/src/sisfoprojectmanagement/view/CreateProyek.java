@@ -6,7 +6,7 @@
 package sisfoprojectmanagement.view;
 
 import java.awt.event.ActionListener;
-import javax.swing.JTextArea;
+
 import javax.swing.JTextField;
 
 /**
@@ -23,14 +23,7 @@ public class CreateProyek extends javax.swing.JFrame {
         this.Deadline = Deadline;
     }
 
-    public JTextArea getDetailProyek() {
-        return DetailProyek;
-    }
-
-    public void setDetailProyek(JTextArea DetailProyek) {
-        this.DetailProyek = DetailProyek;
-    }
-
+  
     public JTextField getNamaProyek() {
         return NamaProyek;
     }
@@ -63,18 +56,11 @@ public class CreateProyek extends javax.swing.JFrame {
 
         NamaProyek = new javax.swing.JTextField();
         Deadline = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        DetailProyek = new javax.swing.JTextArea();
         BtnCreate = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        DetailProyek.setColumns(20);
-        DetailProyek.setRows(5);
-        jScrollPane1.setViewportView(DetailProyek);
 
         BtnCreate.setText("Create");
 
@@ -82,26 +68,24 @@ public class CreateProyek extends javax.swing.JFrame {
 
         jLabel2.setText("Deadline");
 
-        jLabel3.setText("Detail proyek");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(BtnCreate))
-                    .addComponent(NamaProyek)
-                    .addComponent(Deadline))
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(NamaProyek, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(Deadline)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(162, 162, 162)
+                        .addComponent(BtnCreate)))
                 .addContainerGap(119, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -115,16 +99,9 @@ public class CreateProyek extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Deadline, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel3)))
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addComponent(BtnCreate)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         pack();
@@ -137,11 +114,8 @@ public class CreateProyek extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCreate;
     private javax.swing.JTextField Deadline;
-    private javax.swing.JTextArea DetailProyek;
     private javax.swing.JTextField NamaProyek;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
