@@ -19,6 +19,8 @@ public class SisfoProjectManagement {
         Aplikasi App = new Aplikasi();
         App.mainMenu();
         
+        
+        new ControllerViewPelanggan(App);
     }
     
 }
