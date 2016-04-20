@@ -5,6 +5,8 @@
  */
 package sisfoprojectmanagement;
 
+import controller.ControllerLogin;
+
 /**
  *
  * @author skday
@@ -20,7 +22,7 @@ public class SisfoProjectManagement {
         App.mainMenu();
         
         
-        new ControllerViewPelanggan(App);
+        new ControllerLogin(App);
     }
     
 }
