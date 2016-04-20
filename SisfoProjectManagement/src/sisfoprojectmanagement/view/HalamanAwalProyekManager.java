@@ -6,7 +6,9 @@
 package sisfoprojectmanagement.view;
 
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  *
@@ -61,6 +63,72 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
     public void setNamaProyek3(JLabel NamaProyek3) {
         this.NamaProyek3 = NamaProyek3;
     }
+
+    public JButton getBtnCreateProyek() {
+        return BtnCreateProyek;
+    }
+
+    public void setBtnCreateProyek(JButton BtnCreateProyek) {
+        this.BtnCreateProyek = BtnCreateProyek;
+    }
+
+    public JButton getBtnDetailProyek1() {
+        return BtnDetailProyek1;
+    }
+
+    public void setBtnDetailProyek1(JButton BtnDetailProyek1) {
+        this.BtnDetailProyek1 = BtnDetailProyek1;
+    }
+
+    public JButton getBtnDetailProyek2() {
+        return BtnDetailProyek2;
+    }
+
+    public void setBtnDetailProyek2(JButton BtnDetailProyek2) {
+        this.BtnDetailProyek2 = BtnDetailProyek2;
+    }
+
+    public JButton getBtnDetailProyek3() {
+        return BtnDetailProyek3;
+    }
+
+    public void setBtnDetailProyek3(JButton BtnDetailProyek3) {
+        this.BtnDetailProyek3 = BtnDetailProyek3;
+    }
+
+    public JButton getBtnHapusproyek1() {
+        return btnHapusproyek1;
+    }
+
+    public void setBtnHapusproyek1(JButton btnHapusproyek1) {
+        this.btnHapusproyek1 = btnHapusproyek1;
+    }
+
+    public JButton getBtnHapusproyek2() {
+        return btnHapusproyek2;
+    }
+
+    public void setBtnHapusproyek2(JButton btnHapusproyek2) {
+        this.btnHapusproyek2 = btnHapusproyek2;
+    }
+
+    public JButton getBtnHapusproyek3() {
+        return btnHapusproyek3;
+    }
+
+    public void setBtnHapusproyek3(JButton btnHapusproyek3) {
+        this.btnHapusproyek3 = btnHapusproyek3;
+    }
+
+    public JButton getBtnLogout() {
+        return btnLogout;
+    }
+
+    public void setBtnLogout(JButton btnLogout) {
+        this.btnLogout = btnLogout;
+    }
+    
+    
  public void addListener(ActionListener e){
         BtnCreateProyek.addActionListener(e);
         BtnDetailProyek1.addActionListener(e);
@@ -69,15 +137,27 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         btnHapusproyek1.addActionListener(e);
         btnHapusproyek2.addActionListener(e);
         btnHapusproyek3.addActionListener(e);
-       
+        btnLogout.addActionListener(e);
     }
     /**
      * Creates new form HalamanProyejManager
      */
     public HalamanAwalProyekManager() {
         initComponents();
-         this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
         this.setTitle("Halaman Awal Proyek Manager");
+    }
+
+    public JPanel getPProyek1() {
+        return PProyek1;
+    }
+
+    public JPanel getPProyek2() {
+        return PProyek2;
+    }
+
+    public JPanel getPProyek3() {
+        return PProyek3;
     }
 
     /**
@@ -102,7 +182,7 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         jFrame2 = new javax.swing.JFrame();
         BtnCreateProyek = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jPanel3 = new javax.swing.JPanel();
+        PProyek1 = new javax.swing.JPanel();
         BtnDetailProyek1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -111,7 +191,7 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         NamaProyek1 = new javax.swing.JLabel();
         DL1 = new javax.swing.JLabel();
         btnHapusproyek1 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        PProyek2 = new javax.swing.JPanel();
         BtnDetailProyek2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -120,7 +200,7 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         NamaProyek2 = new javax.swing.JLabel();
         DL2 = new javax.swing.JLabel();
         btnHapusproyek2 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        PProyek3 = new javax.swing.JPanel();
         BtnDetailProyek3 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -129,6 +209,7 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         NamaProyek3 = new javax.swing.JLabel();
         DL3 = new javax.swing.JLabel();
         btnHapusproyek3 = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -199,7 +280,7 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
 
         BtnCreateProyek.setText("Create Proyek");
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Proyek 1"));
+        PProyek1.setBorder(javax.swing.BorderFactory.createTitledBorder("Proyek 1"));
 
         BtnDetailProyek1.setText("Detail Proyek");
 
@@ -217,48 +298,48 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
 
         btnHapusproyek1.setText("Hapus Proyek");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout PProyek1Layout = new javax.swing.GroupLayout(PProyek1);
+        PProyek1.setLayout(PProyek1Layout);
+        PProyek1Layout.setHorizontalGroup(
+            PProyek1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PProyek1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnHapusproyek1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnDetailProyek1)
                 .addGap(30, 30, 30))
-            .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(PProyek1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(PProyek1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel7)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(PProyek1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(PProyek1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(DL1))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(PProyek1Layout.createSequentialGroup()
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(NamaProyek1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        PProyek1Layout.setVerticalGroup(
+            PProyek1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PProyek1Layout.createSequentialGroup()
                 .addContainerGap(21, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PProyek1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jLabel10)
                     .addComponent(NamaProyek1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PProyek1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel4)
                     .addComponent(DL1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PProyek1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnDetailProyek1)
                     .addComponent(btnHapusproyek1))
                 .addContainerGap())
@@ -267,7 +348,7 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         NamaProyek1.getAccessibleContext().setAccessibleName("LP1");
         DL1.getAccessibleContext().setAccessibleName("LDL1");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Proyek 2"));
+        PProyek2.setBorder(javax.swing.BorderFactory.createTitledBorder("Proyek 2"));
 
         BtnDetailProyek2.setText("Detail Proyek");
 
@@ -290,48 +371,49 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout PProyek2Layout = new javax.swing.GroupLayout(PProyek2);
+        PProyek2.setLayout(PProyek2Layout);
+        PProyek2Layout.setHorizontalGroup(
+            PProyek2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PProyek2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnHapusproyek2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnDetailProyek2)
                 .addGap(29, 29, 29))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(PProyek2Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(PProyek2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel8)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(PProyek2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(PProyek2Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(DL2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(PProyek2Layout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(NamaProyek2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        PProyek2Layout.setVerticalGroup(
+            PProyek2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PProyek2Layout.createSequentialGroup()
                 .addContainerGap(16, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PProyek2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jLabel11)
                     .addComponent(NamaProyek2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel5)
-                    .addComponent(DL2))
+                .addGroup(PProyek2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PProyek2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel5)
+                        .addComponent(DL2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PProyek2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnDetailProyek2)
                     .addComponent(btnHapusproyek2))
                 .addContainerGap())
@@ -340,7 +422,7 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         NamaProyek2.getAccessibleContext().setAccessibleName("LNP2");
         DL2.getAccessibleContext().setAccessibleName("LDL2");
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Proyek 3"));
+        PProyek3.setBorder(javax.swing.BorderFactory.createTitledBorder("Proyek 3"));
 
         BtnDetailProyek3.setText("Detail Proyek");
 
@@ -358,22 +440,22 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
 
         btnHapusproyek3.setText("Hapus Proyek");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout PProyek3Layout = new javax.swing.GroupLayout(PProyek3);
+        PProyek3.setLayout(PProyek3Layout);
+        PProyek3Layout.setHorizontalGroup(
+            PProyek3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PProyek3Layout.createSequentialGroup()
                 .addGap(4, 4, 4)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(PProyek3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(PProyek3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PProyek3Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(DL3))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(PProyek3Layout.createSequentialGroup()
                         .addComponent(jLabel12)
                         .addGap(35, 35, 35)
                         .addComponent(NamaProyek3)))
@@ -383,21 +465,21 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
                 .addComponent(BtnDetailProyek3)
                 .addGap(29, 29, 29))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        PProyek3Layout.setVerticalGroup(
+            PProyek3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PProyek3Layout.createSequentialGroup()
                 .addContainerGap(25, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PProyek3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jLabel12)
                     .addComponent(NamaProyek3))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PProyek3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PProyek3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel3)
                         .addComponent(jLabel6)
                         .addComponent(DL3))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(PProyek3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(BtnDetailProyek3)
                         .addComponent(btnHapusproyek3)))
                 .addGap(24, 24, 24))
@@ -406,6 +488,8 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
         NamaProyek3.getAccessibleContext().setAccessibleName("LNP3");
         DL3.getAccessibleContext().setAccessibleName("LDL3");
 
+        btnLogout.setText("Logout");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -413,32 +497,40 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(BtnCreateProyek)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(PProyek2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(PProyek3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(PProyek1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(BtnCreateProyek)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnLogout)
+                        .addGap(38, 38, 38))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(BtnCreateProyek)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnCreateProyek)
+                    .addComponent(btnLogout))
                 .addGap(28, 28, 28)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PProyek1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PProyek2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PProyek3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
-        jPanel3.getAccessibleContext().setAccessibleName("panel1");
-        jPanel1.getAccessibleContext().setAccessibleName("panel2");
-        jPanel2.getAccessibleContext().setAccessibleName("panel3");
+        PProyek1.getAccessibleContext().setAccessibleName("panel1");
+        PProyek2.getAccessibleContext().setAccessibleName("panel2");
+        PProyek3.getAccessibleContext().setAccessibleName("panel3");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -463,9 +555,13 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
     private javax.swing.JLabel NamaProyek1;
     private javax.swing.JLabel NamaProyek2;
     private javax.swing.JLabel NamaProyek3;
+    private javax.swing.JPanel PProyek1;
+    private javax.swing.JPanel PProyek2;
+    private javax.swing.JPanel PProyek3;
     private javax.swing.JButton btnHapusproyek1;
     private javax.swing.JButton btnHapusproyek2;
     private javax.swing.JButton btnHapusproyek3;
+    private javax.swing.JButton btnLogout;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
@@ -487,9 +583,6 @@ public class HalamanAwalProyekManager extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JSeparator jSeparator1;

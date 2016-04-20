@@ -14,8 +14,8 @@ import java.util.Date;
 public class Proyek {
     private Programmer[] programmer;
     private Tugas[] tugas;
-    String nama;
-    Date deadline;
+    private String nama;
+    private Date deadline;
     int nProgrammmer=0;
     int nTugas=0;
     
@@ -105,7 +105,7 @@ public class Proyek {
         }
         nTugas--;
     }
-    
+
     public void setNama(String nama){
         this.nama=nama;
     }

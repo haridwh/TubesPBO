@@ -27,6 +27,10 @@ public class Aplikasi {
         listOrang.add(p);
     }
     
+    public List<Object> getListOrang(){
+        return this.listOrang;
+    }
+    
     public ManajerProyek getManajerProyek(String nama){
         int i = 0;
         boolean get = false;
@@ -107,7 +111,7 @@ public class Aplikasi {
             String date = scr.nextLine();
             mp.createProyek(new SimpleDateFormat("dd/MM/yyyy").parse(date));
             System.out.print("Masukkan Nama Proyke : ");
-            mp.getProyek((mp.getNProyek()-1)).nama = scr.nextLine();
+            mp.getProyek((mp.getNProyek()-1)).setNama(scr.nextLine());
         } catch (ParseException e) {
             System.out.println("Inputan Salah");
             scr.nextLine();
@@ -120,8 +124,8 @@ public class Aplikasi {
             if(mp.getNProyek() != 0){
                 for(int i=0;i<mp.getNProyek();i++){
                     System.out.println("Proyek ke-"+(i+1));
-                    System.out.println("Nama : "+ mp.getProyek(i).nama);
-                    System.out.println("Deadline : " +mp.getProyek(i).deadline);
+                    System.out.println("Nama : "+ mp.getProyek(i).getNama());
+                    System.out.println("Deadline : " +mp.getProyek(i).getDeadLine());
                     System.out.println();
                 }
                 System.out.println("=============================================");
@@ -150,62 +154,68 @@ public class Aplikasi {
     }
     
     public void detailProyek(ManajerProyek mp, int n){
-        char pil = 'z';
-        while(pil != '0'){
-            if(mp.getProyek(n).getNProgrammmer() !=0){
-                for(int i = 0; i<mp.getProyek(n).getNProgrammmer();i++){
-                    System.out.println();
-                    System.out.println("Programmer "+(i+1));
-                    System.out.println("Nama : "+mp.getProyek(n).getProgrammer(i).getnama());
-                    System.out.println("Umur : "+mp.getProyek(n).getProgrammer(i).getusia());
-                    System.out.println("Gender : "+mp.getProyek(n).getProgrammer(i).getkelamin());
-                }
-                System.out.println("=============================================");
-            }else{
-                System.out.println("Belum ada programmer");
-                System.out.println("=============================================");
-            }
-            
-            if(mp.getProyek(n).getNTugas() != 0){
-                for(int i = 0; i<mp.getProyek(n).getNTugas() ;i++){
-                    System.out.println("Tugas "+(i+1));
-                    System.out.println("Nama Tugas : "+mp.getProyek(n).getTugas(i).getNama());
-                    System.out.println("Detail : "+mp.getProyek(n).getTugas(i).getDetail());
-                    System.out.println("Pelaksana : "+mp.getProyek(n).getTugas(i).getPelaksana().getnama());
-                    System.out.println("Deadline : "+mp.getProyek(n).getTugas(i).getDeadline());
-                    if (mp.getProyek(n).getTugas(i).getStatus()){
-                        System.out.println("Status : Selesai");
-                    }else{
-                        System.out.println("Status : Belum Selesai");
+        if (mp.getNProyek() > n) {
+            char pil = 'z';
+            while(pil != '0'){
+                if(mp.getProyek(n).getNProgrammmer() !=0){
+                    for(int i = 0; i<mp.getProyek(n).getNProgrammmer();i++){
+                        System.out.println();
+                        System.out.println("Programmer "+(i+1));
+                        System.out.println("Nama : "+mp.getProyek(n).getProgrammer(i).getnama());
+                        System.out.println("Umur : "+mp.getProyek(n).getProgrammer(i).getusia());
+                        System.out.println("Gender : "+mp.getProyek(n).getProgrammer(i).getkelamin());
                     }
-                    System.out.println();
+                    System.out.println("=============================================");
+                }else{
+                    System.out.println("Belum ada programmer");
+                    System.out.println("=============================================");
                 }
-                System.out.println("=============================================");
-            }else{
-                System.out.println("Belum ada tugas");
-                System.out.println("=============================================");
+
+                if(mp.getProyek(n).getNTugas() != 0){
+                    for(int i = 0; i<mp.getProyek(n).getNTugas() ;i++){
+                        System.out.println("Tugas "+(i+1));
+                        System.out.println("Nama Tugas : "+mp.getProyek(n).getTugas(i).getNama());
+                        System.out.println("Detail : "+mp.getProyek(n).getTugas(i).getDetail());
+                        System.out.println("Pelaksana : "+mp.getProyek(n).getTugas(i).getPelaksana().getnama());
+                        System.out.println("Deadline : "+mp.getProyek(n).getTugas(i).getDeadline());
+                        if (mp.getProyek(n).getTugas(i).getStatus()){
+                            System.out.println("Status : Selesai");
+                        }else{
+                            System.out.println("Status : Belum Selesai");
+                        }
+                        System.out.println();
+                    }
+                    System.out.println("=============================================");
+                }else{
+                    System.out.println("Belum ada tugas");
+                    System.out.println("=============================================");
+                }
+                System.out.println("1. Tambah Programmer");
+                System.out.println("2. Hapus Programmer");
+                System.out.println("3. Buat Tugas");
+                System.out.println("4. Hapus Tugas");
+                System.out.println("0. Kembali");
+                System.out.print("Pilih : ");
+                pil = scr.next().charAt(0);
+                switch (pil){
+                    case '1':
+                        tambahProgrammer(mp, n);
+                        break;
+                    case '2':
+                        hapusProgrammer(mp, n);
+                        break;
+                    case '3':
+                        buatTugas(mp,n);
+                        break;
+                    case '4':
+                        hapusTugas(mp, n);
+                        break;
+                }
             }
-            System.out.println("1. Tambah Programmer");
-            System.out.println("2. Hapus Programmer");
-            System.out.println("3. Buat Tugas");
-            System.out.println("4. Hapus Tugas");
-            System.out.println("0. Kembali");
-            System.out.print("Pilih : ");
-            pil = scr.next().charAt(0);
-            switch (pil){
-                case '1':
-                    tambahProgrammer(mp, n);
-                    break;
-                case '2':
-                    hapusProgrammer(mp, n);
-                    break;
-                case '3':
-                    buatTugas(mp,n);
-                    break;
-                case '4':
-                    hapusTugas(mp, n);
-                    break;
-            }
+        }else{
+            System.out.println("Proyek dengan nomor "+(n+1)+" tidak ada");
+            scr.nextLine();
+            scr.nextLine();
         }
     }
     
@@ -233,54 +243,71 @@ public class Aplikasi {
     }
     
     public void hapusProgrammer(ManajerProyek mp, int n){
-        System.out.println("Nomor programmer yang akan dihapus : ");
-        int i = scr.nextInt();
-        mp.getProyek(n).removeProgrammer(i);
-    }
-    
-    public void buatTugas(ManajerProyek mp, int n){
-        try {
+        if (mp.getProyek(n).getNProgrammmer()!=0) {
+            System.out.println("Nomor programmer yang akan dihapus : ");
+            int i = scr.nextInt();
+            mp.getProyek(n).removeProgrammer(i);
+        }else{
+            System.out.println("Tidak Ada Programmer");
             scr.nextLine();
-            System.out.print("Nama tugas : ");
-            String namaT = scr.nextLine();
-            System.out.print("Detail tugas : ");
-            String detailT = scr.nextLine();
-            System.out.print("Deadline : ");
-            String date = scr.nextLine();
-            mp.getProyek(n).createTugas(namaT);
-            mp.getProyek(n).getTugas((mp.getProyek(n).getNTugas()-1)).setDetail(detailT);
-            mp.getProyek(n).getTugas((mp.getProyek(n).getNTugas()-1))
-                    .setDeadline(new SimpleDateFormat("dd/MM/yyyy").parse(date));
-            boolean get = false;
-            while (!get){
-                System.out.print("Pelaksana : ");
-                String pelaksana = scr.nextLine();
-                int i = 0;
-                while ((i < mp.getProyek(i).getNProgrammmer()) && (!get)){
-                    if (mp.getProyek(n).getProgrammer(i).getnama()
-                            .equalsIgnoreCase(pelaksana)){
-                        get=true;
-                    }else{
-                        i++;
-                    }
-                }
-                if (get){
-                    mp.getProyek(n).getTugas((mp.getProyek(n).getNTugas()-1))
-                            .setPelaksana(mp.getProyek(n).getProgrammer(i));
-                }else{
-                    System.out.println("Programmer tidak terdaftar pada proyek ini.");
-                }
-            }
-        }catch(ParseException e){
-            System.out.println("Inputan Salah");
             scr.nextLine();
         }
     }
     
+    public void buatTugas(ManajerProyek mp, int n){
+        if (mp.getProyek(n).getNProgrammmer()!=0) {
+            try {
+                scr.nextLine();
+                System.out.print("Nama tugas : ");
+                String namaT = scr.nextLine();
+                System.out.print("Detail tugas : ");
+                String detailT = scr.nextLine();
+                System.out.print("Deadline : ");
+                String date = scr.nextLine();
+                mp.getProyek(n).createTugas(namaT);
+                mp.getProyek(n).getTugas((mp.getProyek(n).getNTugas()-1)).setDetail(detailT);
+                mp.getProyek(n).getTugas((mp.getProyek(n).getNTugas()-1))
+                        .setDeadline(new SimpleDateFormat("dd/MM/yyyy").parse(date));
+                boolean get = false;
+                while (!get){
+                    System.out.print("Pelaksana : ");
+                    String pelaksana = scr.nextLine();
+                    int i = 0;
+                    while ((i < mp.getProyek(n).getNProgrammmer()) && (!get)){
+                        if (mp.getProyek(n).getProgrammer(i).getnama()
+                                .equalsIgnoreCase(pelaksana)){
+                            get=true;
+                        }else{
+                            i++;
+                        }
+                    }
+                    if (get){
+                        mp.getProyek(n).getTugas((mp.getProyek(n).getNTugas()-1))
+                                .setPelaksana(mp.getProyek(n).getProgrammer(i));
+                    }else{
+                        System.out.println("Programmer tidak terdaftar pada proyek ini.");
+                    }
+                }
+            }catch(ParseException e){
+                System.out.println("Inputan Salah");
+                scr.nextLine();
+            }
+        }else{
+            System.out.println("Belum ada pelaksana/programmer, silakan tambahkan terlebih dahulu");
+            scr.nextLine();
+        }
+        
+    }
+    
     public void hapusTugas(ManajerProyek mp, int n){
-        System.out.println("Nomer tugas yang akan dihapus : ");
-        int i = scr.nextInt();
-        mp.getProyek(n).deleteTugas(i);
+        if (mp.getProyek(n).getNTugas()!=0) {
+            System.out.println("Nomer tugas yang akan dihapus : ");
+            int i = scr.nextInt();
+            mp.getProyek(n).deleteTugas(i);
+        }else{
+            System.out.println("Tidak Ada Tugas");
+            scr.nextLine();
+        }
     }
     
     public void tugasSelesai(){
@@ -324,7 +351,6 @@ public class Aplikasi {
     
     public void login(String nm){
         if (getManajerProyek(nm) != null){
-            System.out.println("error");
             menuManajerProyek(getManajerProyek(nm));
         }else if (getProgrammer(nm)!= null){
             menuProgrammer(getProgrammer(nm));
@@ -421,6 +447,7 @@ public class Aplikasi {
     public void mainMenu(){
         char pil='z';
         while(pil != '0'){
+            System.out.println(listOrang.size());
             System.out.println("Menu");
             System.out.println("1. Login");
             System.out.println("2. Tambah Orang");
