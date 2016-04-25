@@ -46,12 +46,12 @@ public class TambahOrang extends javax.swing.JFrame {
         this.Status = Status;
     }
 
-    public String getJK() {
-        return JK.getText();
+    public JComboBox<String> getJK() {
+        return JK;
     }
 
-    public void setJK(String s) {
-        JK.setText(s);
+    public void setJK(JComboBox<String> JK) {
+        this.JK = JK;
     }
 
     public String getNama() {
@@ -81,7 +81,6 @@ public class TambahOrang extends javax.swing.JFrame {
 
         Nama = new javax.swing.JTextField();
         Usia = new javax.swing.JTextField();
-        JK = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -89,14 +88,9 @@ public class TambahOrang extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         Status = new javax.swing.JComboBox();
         btnKembali = new javax.swing.JButton();
+        JK = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        JK.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JKActionPerformed(evt);
-            }
-        });
 
         jLabel1.setText("Nama");
 
@@ -117,6 +111,8 @@ public class TambahOrang extends javax.swing.JFrame {
 
         btnKembali.setText("Batal");
 
+        JK.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Laki-Laki", "Perempuan" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -133,9 +129,9 @@ public class TambahOrang extends javax.swing.JFrame {
                     .addComponent(btnKembali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCreate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Status, 0, 146, Short.MAX_VALUE)
-                    .addComponent(JK)
                     .addComponent(Usia)
-                    .addComponent(Nama))
+                    .addComponent(Nama)
+                    .addComponent(JK, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(125, 125, 125))
         );
         layout.setVerticalGroup(
@@ -151,8 +147,8 @@ public class TambahOrang extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel3)
+                    .addComponent(JK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -167,10 +163,6 @@ public class TambahOrang extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JKActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JKActionPerformed
-
     private void StatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StatusActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_StatusActionPerformed
@@ -181,7 +173,7 @@ public class TambahOrang extends javax.swing.JFrame {
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField JK;
+    private javax.swing.JComboBox<String> JK;
     private javax.swing.JTextField Nama;
     private javax.swing.JComboBox Status;
     private javax.swing.JTextField Usia;

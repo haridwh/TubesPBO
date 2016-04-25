@@ -11,10 +11,12 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JOptionPane;
 import sisfoprojectmanagement.Aplikasi;
 import sisfoprojectmanagement.ManajerProyek;
 import sisfoprojectmanagement.Proyek;
 import sisfoprojectmanagement.view.DetailProyek;
+import sisfoprojectmanagement.view.hapusProgrammer;
 
 /**
  *
@@ -53,7 +55,14 @@ public class ControllerDetailProyek extends MouseAdapter implements ActionListen
             new ControllerCreateTugas(model, mp, p);
             view.dispose();
         }else if (source.equals(view.getBtnHapusTugas())) {
-            
+            Integer n = view.getListTugas().getSelectedIndex();
+            if (n != null) {
+                p.deleteTugas(n);
+                view.dispose();
+                new ControllerDetailProyek(model, mp, p);
+            }else{
+                JOptionPane.showMessageDialog(view, "Pilih tugas terlebih dahulu!");
+            }
         }else if (source.equals(view.getBtnTambahprogrammer())) {
             new ControllerTambahProgrammer(model, mp, p);
             view.dispose();
@@ -65,6 +74,7 @@ public class ControllerDetailProyek extends MouseAdapter implements ActionListen
         }
     }
     
+    @Override
     public void mousePressed(MouseEvent e){
         Object source = e.getSource();
         if (source.equals(view.getListTugas())) {

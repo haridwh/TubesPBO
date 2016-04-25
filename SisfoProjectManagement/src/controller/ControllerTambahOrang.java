@@ -33,7 +33,7 @@ public class ControllerTambahOrang implements ActionListener{
         Object source = e.getSource();
         if (source.equals(view.getBtnCreate())) {
             String nama = view.getNama();
-            String jk = view.getJK();
+            String jk = view.getJK().getSelectedItem().toString();
             char a=0;
             if (view.getStatus().getSelectedIndex()==0) {
                 a = '1';

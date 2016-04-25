@@ -310,10 +310,7 @@ public class Aplikasi {
         }
     }
     
-    public void tugasSelesai(){
-        scr.nextLine();
-        System.out.println("Masukkan nama tugas : ");
-        String nama = scr.nextLine();
+    public boolean tugasSelesai(String nama){
         int i=0;
         int j=0;
         int k=0;
@@ -342,11 +339,7 @@ public class Aplikasi {
             }
             i++;
         }
-        if(get){
-            System.out.println("Status berhasil dirubah");
-        }else{
-            System.out.println("Tidak ditemukan tugas "+nama);
-        }
+        return get;
     }
     
     public void login(String nm){
@@ -432,7 +425,14 @@ public class Aplikasi {
                 pil = scr.next().charAt(0);
                 switch (pil){
                     case '1':
-                        tugasSelesai();
+                        scr.nextLine();
+                        System.out.println("Masukkan nama tugas : ");
+                        String nama = scr.nextLine();
+                        if(tugasSelesai(nama)){
+                            System.out.println("Status berhasil dirubah");
+                        }else{
+                            System.out.println("Tidak ditemukan tugas "+nama);
+                        }
                         break;
                 }
             }            
