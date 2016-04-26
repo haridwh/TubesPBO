@@ -19,10 +19,13 @@ public class SisfoProjectManagement {
     public static void main(String[] args) {
         // TODO code application logic here
         Aplikasi App = new Aplikasi();
+        Serialization sr = new Serialization();
+        App.setListOrang(sr.deserializeList());
         //App.mainMenu();
         
         
         new ControllerLogin(App);
+        sr.serializeList(App.getListOrang());
     }
     
 }

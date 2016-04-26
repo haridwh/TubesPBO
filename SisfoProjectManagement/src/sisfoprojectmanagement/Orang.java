@@ -5,11 +5,13 @@
  */
 package sisfoprojectmanagement;
 
+import java.io.Serializable;
+
 /**
  *
  * @author gridd
  */
-public class Orang {
+public class Orang implements Serializable{
     private String nama;
 private String kelamin;
 private int usia;

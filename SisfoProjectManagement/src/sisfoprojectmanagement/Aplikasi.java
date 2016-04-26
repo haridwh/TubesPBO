@@ -16,7 +16,7 @@ import java.util.Scanner;
  * @author skday
  */
 public class Aplikasi {
-    List<Object> listOrang  = new ArrayList<Object>();
+    List<Orang> listOrang  = new ArrayList<Orang>();
     Scanner scr = new Scanner(System.in);
     
     public void addManajerProyek(ManajerProyek mP){
@@ -27,8 +27,12 @@ public class Aplikasi {
         listOrang.add(p);
     }
     
-    public List<Object> getListOrang(){
+    public List<Orang> getListOrang(){
         return this.listOrang;
+    }
+
+    public void setListOrang(List<Orang> listOrang) {
+        this.listOrang = listOrang;
     }
     
     public ManajerProyek getManajerProyek(String nama){
