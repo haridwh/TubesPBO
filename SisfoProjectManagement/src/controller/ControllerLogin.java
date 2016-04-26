@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import sisfoprojectmanagement.Aplikasi;
+import sisfoprojectmanagement.Serialization;
 import sisfoprojectmanagement.view.Login;
 
 /**
@@ -43,6 +44,10 @@ public class ControllerLogin implements ActionListener{
         }else if(source.equals(view.getBtnTambahOrang())){
             new ControllerTambahOrang(model);
             view.dispose();
+        }else if(source.equals(view.getBtnKeluar())){
+            view.dispose();
+            Serialization sr = new Serialization();
+            sr.serializeList(model.getListOrang());
         }
     }
 }

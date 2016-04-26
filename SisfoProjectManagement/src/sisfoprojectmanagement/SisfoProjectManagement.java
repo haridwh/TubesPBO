@@ -22,10 +22,9 @@ public class SisfoProjectManagement {
         Serialization sr = new Serialization();
         App.setListOrang(sr.deserializeList());
         //App.mainMenu();
-        
-        
+        //sr.serializeList(App.getListOrang());
+      
         new ControllerLogin(App);
-        sr.serializeList(App.getListOrang());
     }
     
 }

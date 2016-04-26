@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 package sisfoprojectmanagement;
+import java.io.Serializable;
 import java.util.Date;
 /**
  *
  * @author Maidarman
  */
-public class Tugas {
+public class Tugas implements Serializable{
         private Programmer pelaksana;
 	private String nama;
 	private String detail;

@@ -16,7 +16,6 @@ import sisfoprojectmanagement.Aplikasi;
 import sisfoprojectmanagement.ManajerProyek;
 import sisfoprojectmanagement.Proyek;
 import sisfoprojectmanagement.view.DetailProyek;
-import sisfoprojectmanagement.view.hapusProgrammer;
 
 /**
  *
@@ -46,6 +45,9 @@ public class ControllerDetailProyek extends MouseAdapter implements ActionListen
             s[i]=p.getTugas(i).getNama();
         }
         view.getListTugas().setListData(s);
+        for (int i = 0; i < p.getNProgrammmer(); i++) {
+            view.getcProgrammer().addItem(p.getProgrammer(i).getnama());
+        }
     }
 
     @Override
@@ -67,6 +69,14 @@ public class ControllerDetailProyek extends MouseAdapter implements ActionListen
             new ControllerTambahProgrammer(model, mp, p);
             view.dispose();
         }else if (source.equals(view.getBtnHapusProgrammer())) {
+            Integer i = view.getcProgrammer().getSelectedIndex();
+            if (i!=null) {
+                p.removeProgrammer(i);
+                view.dispose();
+                new ControllerDetailProyek(model, mp, p);
+            }else{
+                JOptionPane.showMessageDialog(view, "Tidak ada programmer yang dipilih!");
+            }
             
         }else if (source.equals(view.getBtnKembali())) {
             new ControllerHalamanAwalPM(model, mp);

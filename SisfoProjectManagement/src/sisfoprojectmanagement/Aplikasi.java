@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  * @author skday
  */
-public class Aplikasi {
+public class  Aplikasi {
     List<Orang> listOrang  = new ArrayList<Orang>();
     Scanner scr = new Scanner(System.in);
     

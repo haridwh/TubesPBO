@@ -25,6 +25,7 @@ public class Login extends javax.swing.JFrame {
     }
 public void addListener(ActionListener e){
         btnLogin.addActionListener(e);
+        btnKeluar.addActionListener(e);
         BtnTambahOrang.addActionListener(e);
     }
     /**
@@ -38,6 +39,10 @@ public void addListener(ActionListener e){
 
     public JButton getBtnTambahOrang() {
         return BtnTambahOrang;
+    }
+
+    public JButton getBtnKeluar() {
+        return btnKeluar;
     }
 
     public JButton getBtnLogin() {
@@ -57,6 +62,7 @@ public void addListener(ActionListener e){
         btnLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         BtnTambahOrang = new javax.swing.JButton();
+        btnKeluar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,13 +74,20 @@ public void addListener(ActionListener e){
 
         BtnTambahOrang.setText("Tambah Orang");
 
+        btnKeluar.setText("Keluar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnKeluar)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
@@ -97,7 +110,9 @@ public void addListener(ActionListener e){
                 .addGap(18, 18, 18)
                 .addComponent(btnLogin)
                 .addGap(57, 57, 57)
-                .addComponent(BtnTambahOrang)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnTambahOrang)
+                    .addComponent(btnKeluar))
                 .addContainerGap())
         );
 
@@ -115,6 +130,7 @@ public void addListener(ActionListener e){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnTambahOrang;
     private javax.swing.JTextField TUsername;
+    private javax.swing.JButton btnKeluar;
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

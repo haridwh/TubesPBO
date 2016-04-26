@@ -5,13 +5,14 @@
  */
 package sisfoprojectmanagement;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author skday
  */
-public class Proyek {
+public class Proyek implements Serializable{
     private Programmer[] programmer;
     private Tugas[] tugas;
     private String nama;
