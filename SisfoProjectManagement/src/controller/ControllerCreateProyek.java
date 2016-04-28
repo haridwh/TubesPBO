@@ -40,17 +40,37 @@ public class ControllerCreateProyek implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
         if (source.equals(view.getBtnCreate())) {
-            try {
-                SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-                String date = view.getDeadline().getText();
-                Date d = format.parse(date);
-                mp.createProyek(d);
-                mp.getProyek((mp.getNProyek()-1)).setNama(view.getNamaProyek().getText());
-                new ControllerHalamanAwalPM(model, mp);
-                JOptionPane.showMessageDialog(view, "Proyek Berhasil Dibuat");
-                view.dispose();
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(view, "Inputan Salah");
+            if ((!view.getNamaProyek().getText().equals("")) &&
+                    (!view.getDeadline().getText().equals(""))) {
+                int i=0;
+                boolean ada=false;
+                while(i<mp.getNProyek() && (!ada)){
+                    if (view.getNamaProyek().getText()
+                            .equalsIgnoreCase(mp.getProyek(i).getNama())) {
+                        ada=true;
+                    }else{
+                        i++;
+                    }
+                }
+                try {
+                    SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+                    String date = view.getDeadline().getText();
+                    Date d = format.parse(date);
+                    if (!ada) {
+                        mp.createProyek(d);
+                        mp.getProyek((mp.getNProyek()-1)).setNama(view.getNamaProyek().getText());
+                        new ControllerHalamanAwalPM(model, mp);
+                        JOptionPane.showMessageDialog(view, "Proyek Berhasil Dibuat");
+                        view.dispose();
+                    }else{
+                        JOptionPane.showMessageDialog(view, "Proyek dengan nama "
+                            + view.getNamaProyek().getText()+" sudah ada!");
+                    }
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(view, "Inputan Salah");
+                }
+            }else{
+                JOptionPane.showMessageDialog(view, "Form tidak boleh kosong");
             }
         }else if (source.equals(view.getBtnBatal())) {
             new ControllerHalamanAwalPM(model, mp);

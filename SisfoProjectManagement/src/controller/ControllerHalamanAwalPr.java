@@ -58,7 +58,11 @@ public class ControllerHalamanAwalPr extends MouseAdapter implements ActionListe
                 }
             }
         }
-        view.getListTugas().setListData(s);                           
+        view.getListTugas().setListData(s);
+        System.out.println(s[0]==null);
+        if (s[0]==null) {
+            view.getBtnSelesai().setEnabled(false);
+        }
     }
 
     @Override

@@ -48,22 +48,41 @@ public class ControllerCreateTugas implements ActionListener{
                 String pelaksana = view.getNamaProgrammer().getSelectedItem().toString();
                 SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
                 String date = view.getDeadlineTugas().getText();
-                Date d = format.parse(date);
-                p.createTugas(namaTugas);
-                p.getTugas((p.getNTugas()-1)).setDetail(deskripsi);
-                p.getTugas((p.getNTugas()-1)).setDeadline(d);
-                int i = 0;
-                boolean get=false;
-                while ((i < p.getNProgrammmer()) && (!get)){
-                    if (p.getProgrammer(i).getnama()
-                        .equalsIgnoreCase(pelaksana)){
-                        p.getTugas((p.getNTugas()-1)).setPelaksana(p.getProgrammer(i));
-                        get=true;
-                        new ControllerDetailProyek(model, mp, p);
-                        view.dispose();
-                    }else{
-                        i++;
+                if ((!namaTugas.equals("")) && (!deskripsi.equals(""))
+                        && (!pelaksana.equals("")) && (!date.equals(""))) {
+                    Date d = format.parse(date);
+                    int j=0;
+                    boolean ada = false;
+                    while(j<p.getNTugas() && (!ada)){
+                        if (namaTugas.equalsIgnoreCase(p.getTugas(j).getNama())) {
+                            ada = true;
+                        }else{
+                            j++;
+                        }
                     }
+                    if (!ada) {
+                        p.createTugas(namaTugas);
+                        p.getTugas((p.getNTugas()-1)).setDetail(deskripsi);
+                        p.getTugas((p.getNTugas()-1)).setDeadline(d);
+                        int i = 0;
+                        boolean get=false;
+                        while ((i < p.getNProgrammmer()) && (!get)){
+                            if (p.getProgrammer(i).getnama()
+                                .equalsIgnoreCase(pelaksana)){
+                                p.getTugas((p.getNTugas()-1)).setPelaksana(p.getProgrammer(i));
+                                get=true;
+                                new ControllerDetailProyek(model, mp, p);
+                                view.dispose();
+                            }else{
+                                i++;
+                            }
+                        }
+                    }else{
+                        JOptionPane.showMessageDialog(view, "Tugas dengan nama "
+                                + namaTugas+" sudah ada!");
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(view, "Form tidak boleh kosong");
                 }
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(view, "Inputan Salah");

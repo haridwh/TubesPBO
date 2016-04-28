@@ -7,6 +7,7 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import sisfoprojectmanagement.Aplikasi;
 import sisfoprojectmanagement.ManajerProyek;
 import sisfoprojectmanagement.Programmer;
@@ -52,14 +53,28 @@ public class ControllerTambahProgrammer implements ActionListener{
                 if ((model.getListOrang().get(i) instanceof Programmer) 
                         && (((Programmer)model.getListOrang().get(i)).getnama())
                                 .equalsIgnoreCase(nama)){
-                    p.addPogrammer((Programmer)model.getListOrang().get(i));
-                    get=true;
+                    int j=0;
+                    boolean ada = false;
+                    while((j<p.getNProgrammmer()) && (!ada)){
+                        if ((p.getProgrammer(j).getnama().equalsIgnoreCase(nama))) {
+                            ada=true;
+                        }else{
+                            j++;
+                        }
+                    }
+                    if (ada) {
+                        JOptionPane.showMessageDialog(view, "Programmer sudah terdaftar!");
+                        get=true;
+                    }else{
+                        p.addPogrammer((Programmer)model.getListOrang().get(i));
+                        get=true;
+                        new ControllerDetailProyek(model, mp, p);
+                        view.dispose();
+                    }
                 }else{
                     i++;
                 }
             }
-            new ControllerDetailProyek(model, mp, p);
-            view.dispose();
         }else if (source.equals(view.getBtnBatal())) {
             new ControllerDetailProyek(model, mp, p);
             view.dispose();

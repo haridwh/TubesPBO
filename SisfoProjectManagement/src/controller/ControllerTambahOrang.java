@@ -40,15 +40,19 @@ public class ControllerTambahOrang implements ActionListener{
             }else if (view.getStatus().getSelectedIndex()==1){
                 a = '2';
             }
-            try {
-                int usia = Integer.parseInt(view.getUsia());
-                model.tambahOrang(a, nama, usia, jk);
-                JOptionPane.showMessageDialog(view, "Berhasil");
-                new ControllerLogin(model);
-                view.dispose();
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(view, "Input Salah");
+            if ((!nama.equals("")) && (!view.getUsia().equals(""))) {
+                try {
+                    int usia = Integer.parseInt(view.getUsia());
+                    model.tambahOrang(a, nama, usia, jk);
+                    JOptionPane.showMessageDialog(view, "Berhasil");
+                    new ControllerLogin(model);
+                    view.dispose();
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(view, "Input Salah");
 
+                }
+            }else{
+                JOptionPane.showMessageDialog(view, "Form tidak boleh kosong");
             }
         }else if (source.equals(view.getBtnKembali())) {
             new ControllerLogin(model);

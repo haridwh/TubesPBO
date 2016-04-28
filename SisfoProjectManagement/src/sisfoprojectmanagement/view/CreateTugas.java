@@ -114,7 +114,7 @@ public class CreateTugas extends javax.swing.JFrame {
 
         jLabel1.setText("Nama Tugas");
 
-        jLabel2.setText("Deadline Tugas");
+        jLabel2.setText("Deadline (dd/MM/YYYY)");
 
         jLabel3.setText("Deskripsi Tugas");
 

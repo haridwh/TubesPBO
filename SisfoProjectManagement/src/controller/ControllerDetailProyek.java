@@ -48,6 +48,12 @@ public class ControllerDetailProyek extends MouseAdapter implements ActionListen
         for (int i = 0; i < p.getNProgrammmer(); i++) {
             view.getcProgrammer().addItem(p.getProgrammer(i).getnama());
         }
+        if (s[0]==null) {
+            view.getBtnHapusTugas().setEnabled(false);
+        }
+        if (s[9]!=null) {
+            view.getBtnCreateTugas().setEnabled(false);
+        }
     }
 
     @Override
@@ -58,7 +64,7 @@ public class ControllerDetailProyek extends MouseAdapter implements ActionListen
             view.dispose();
         }else if (source.equals(view.getBtnHapusTugas())) {
             Integer n = view.getListTugas().getSelectedIndex();
-            if (n != null) {
+            if (n != -1) {
                 p.deleteTugas(n);
                 view.dispose();
                 new ControllerDetailProyek(model, mp, p);
@@ -70,10 +76,24 @@ public class ControllerDetailProyek extends MouseAdapter implements ActionListen
             view.dispose();
         }else if (source.equals(view.getBtnHapusProgrammer())) {
             Integer i = view.getcProgrammer().getSelectedIndex();
-            if (i!=null) {
-                p.removeProgrammer(i);
-                view.dispose();
-                new ControllerDetailProyek(model, mp, p);
+            if (i!=-1) {
+                int j = 0;
+                boolean ada = false;
+                while ((j<p.getNTugas())&&(!ada)) {
+                    if (p.getTugas(j).getPelaksana().getnama()
+                            .equalsIgnoreCase(view.getcProgrammer().getSelectedItem().toString())) {
+                        ada=true;
+                    }else{
+                        j++;
+                    }
+                }
+                if (!ada) {
+                    p.removeProgrammer(i);
+                    view.dispose();
+                    new ControllerDetailProyek(model, mp, p);
+                }else{
+                    JOptionPane.showMessageDialog(view, "Tidak dapat dihapus!\nProgrammer terdaftar sebagai pelaksana tugas.");
+                }
             }else{
                 JOptionPane.showMessageDialog(view, "Tidak ada programmer yang dipilih!");
             }

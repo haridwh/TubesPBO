@@ -32,14 +32,18 @@ public class ControllerLogin implements ActionListener{
         Object source = e.getSource();
         if (source.equals(view.getBtnLogin())) {
             String nama = view.getTUsername().getText();
-            if (model.getManajerProyek(nama)!=null) {
-                new ControllerHalamanAwalPM(model, model.getManajerProyek(nama));
-                view.dispose();
-            }else if (model.getProgrammer(nama)!=null){
-                new ControllerHalamanAwalPr(model, model.getProgrammer(nama));
-                view.dispose();
+            if (!nama.equals("")) {
+                if (model.getManajerProyek(nama)!=null) {
+                    new ControllerHalamanAwalPM(model, model.getManajerProyek(nama));
+                    view.dispose();
+                }else if (model.getProgrammer(nama)!=null){
+                    new ControllerHalamanAwalPr(model, model.getProgrammer(nama));
+                    view.dispose();
+                }else{
+                    JOptionPane.showMessageDialog(view, "Anda Tidak Terdaftar!");
+                }
             }else{
-                JOptionPane.showMessageDialog(view, "Anda Tidak Terdaftar!");
+                JOptionPane.showMessageDialog(view, "Isi username terlebih dahulu");
             }
         }else if(source.equals(view.getBtnTambahOrang())){
             new ControllerTambahOrang(model);
